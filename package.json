@@ -1,7 +1,7 @@
 {
   "name": "flight-ticket-booking-app-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "I created a flight ticket booking application using a tech stack called MERN, which includes MongoDB, React, Express.js, and Node.js. The goal was to design a simple user interface with easy navigation for booking tickets. I integrated Razorpay for payments and focused on providing a user-friendly seat selection interface.",
   "main": "server.js",
   "type": "module",
   "scripts": {

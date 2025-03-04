@@ -5,7 +5,7 @@ const __dirname = path.resolve();
 import dotenv from "dotenv";
 dotenv.config();
 import helmet from "helmet";
-//import cors from "cors";
+import cors from "cors";
 import cookieParser from "cookie-parser";
 import userRoutes from "./routes/userRoutes.js";
 import flightRoutes from "./routes/flightRoutes.js";
@@ -22,16 +22,14 @@ connectDatabase();
 
 /* Initialing Express */
 const app = express();
-const cors = require("cors")
+
 /* Built-in-Middlewares */
 app.use(express.json());
-// middlware to enabled to cors
-app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use("/", express.static("public"));
 /* 3rd-party-Middlewares */
 app.use(helmet());
-//app.use(cors({ credentials: true, origin: true }));
+app.use(cors({ credentials: true, origin: true }));
 app.use(cookieParser());
 
 /* Routes */
