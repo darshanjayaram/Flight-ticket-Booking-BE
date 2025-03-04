@@ -30,7 +30,6 @@ app.use("/", express.static("public"));
 /* 3rd-party-Middlewares */
 app.use(helmet());
 app.use(cors({ credentials: true, origin: true }));
-app.use(cors());
 app.use(cookieParser());
 
 /* Routes */
